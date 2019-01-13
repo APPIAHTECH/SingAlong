@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Sing Alone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="./../../public/css/style.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/doc/index.html">
+                <span class="icon">
+                    <i class="fas fa-guitar"></i>
+                </span>
+
+                <h1 class="title is-6">Sing Alone </h1>
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/doc/index.html">
+                    Home
+                </a>
+
+                <a class="navbar-item" href="/doc/views/functionality.html">
+                    Description of the functionality
+                </a>
+
+                <a class="navbar-item" href="/doc/views/tasks.html">
+                    Tasks
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+
+        <div class="container">
+
+            <h1 class="title">
+                Description of the functionality
+            </h1>
+
+            <p class="subtitle is-6">
+                We have carried out a couple of interviews <strong>brainstorms</strong>
+                with the client and after cleaning up our
+                notes – in no particular order – we are left with the following description of the functionality that
+                the client wants to implement:
+            </p>
+
+            <ul>
+                <li>
+                    • Both artists and customers (users) enter the system through a Web-based browser
+                </li><br>
+
+                <li>
+                    • An artist, once identified (the first time they enter the system, an artist has to register)
+                    uploads
+                    their songs in Wav format (16 bits, 44.1 kHz). This way, we can use the file both to add the
+                    song to an album, and to convert it into various compressed file formats, always optimizing
+                    quality. For example, we want to avoid selling albums with songs converted from the mp3
+                    format, or repeatedly decompressing and recompressing files.
+                </li><br>
+
+                <li>
+                    • Together with the file, the artist enters the song title, authors, production date and
+                    (optionally)
+                    a description.
+                </li><br>
+
+                <li>
+                    • The system has to automatically convert Wav files to different compressed file formats. The
+                    current file formats are mp3 and ogg at 192, 128 and 96 kbps, but it is probable that in the
+                    future some file formats are eliminated and others are added. Some of these files (except for
+                    the Wav file) will be available to users for downloading or streaming.
+
+                </li><br>
+
+                <li>
+                    • In case uploading large files is not possible (e.g. because of a poor connection) an artist
+                    can also physically mail the songs in digital format (USB memory, CD, etc.) In this case,
+                    the envelope has to be identified with the real and registered name of the artist. It is also
+                    necessary for the storage device to contain a file “info.txt” that provides information about
+                    the songs (title, authors, etc.)
+
+                </li><br>
+
+                <li>
+                    • The songs on physical devices will be entered into the system by a human operator, who
+                    needs access to the system via a graphical interface (not a Web browser).
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="section">
+
+        <div class="container">
+            <h1 class="title">Albums</h1>
+            <p>
+                The artists can define albums, by simply providing a list of songs that appear on the album (the
+                total size of the Wav files cannot exceed a given limit), a production date, optional comments, and
+                a set of keywords that describe the music style (e.g. techno-ambient, electro-pop, pop, sixties,
+                rock, metal...) The artist can also upload (via the Web-based interface) or send (by mail)
+                promotional material in digital format.
+
+                <br><br>
+                An artist can, in theory, add the same song to different albums. However, this should usually
+                be avoided in order not to confuse users that follow this artist.
+                The production cost of each album includes a fixed part (not proportional to the final price of
+                the album) that is paid to the record label. Knowing this amount, the artists can themselves decide
+                how much to charge for an album. Both the prices and the proportion paid to the record label and the
+                artist are flexible and can be
+                modified at any time.
+
+                <br><br>
+                A customer can also purchase personalized albums, selecting songs by an artist of choice. If
+                the artist permits, it is also possible to mix songs of different artists. In this case the total
+                sale price is computed on the basis of the price of each individual song.
+
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+
+        <div class="container">
+            <h1 class="title">Promotional material</h1>
+            <p>
+                The system accepts images (in jpg or png format), text (in PDF format) and videos (in mpeg
+                format). The system should include a manual that explains to artists how to create and upload
+                promotional material and which are the memory limits for each of the permitted file formats.
+
+                <br><br>
+                The system is in charge of managing promotional material and distributing it to users when
+                they purchase songs and/or albums.
+
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+
+        <div class="container">
+            <h1 class="title">Regular users</h1>
+            <p>
+                Regular users should also register if they want to use the Web service. This is because we want to
+                track who downloads a file, votes for an artist or song, etc.
+
+                <br><br>
+                However, we want registration to be simple: the system only asks for a username and password.
+                Optionally, a user may register their real name and email address. Registering emails enables the
+                system to notify users of novel content that may interest them
+
+                <br><br>
+                Once identified and logged into the system, a user can search for artists, jump from one artist
+                to another (in a way described later), and show information about an artist: which are the albums
+                and associated songs, and which songs do not belong to any album.
+
+                <br><br>
+                Some songs can be downloaded individually (or streamed directly in the webpage). As previously
+                mentioned, songs are grouped into albums that are sold as units. Each song and album has a
+                rating and an area where users can provide comments or reviews. Each user can add a single vote
+                or comment, but only if the user bought or downloaded the given song or album.
+
+                <br><br>
+                Optionally, a user can choose to purchase an album on a CD which is burned and subsequently
+                mailed to the user’s address. In this case, the sales price includes the cost of buying, burning and
+                mailing the CD. The cost of buying and burning the CD is fixed, but the mailing cost depends on
+                the country of the user.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section">
+
+        <div class="container">
+            <h1 class="title">Donations</h1>
+            <p>
+                The system should incentivize the culture of making donations. Even if a user does not purchase a
+                song that they downloaded for free, they may want to thank the user by making a small donation.
+                For this reason, on the download page there should always be a link for donating money using
+                Paypal (www.paypal.com) as intermediary (Paypal does not charge a commission to the record
+                label). It is hoped that the donations mechanism will help attract artists to the Web service.
+
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section">
+
+        <div class="container">
+            <h1 class="title">Search</h1>
+            <p>
+                The system should make it possible to search for artists by name or by music style. The search
+                result should be ordered by an overall rating (that we call “performance”) that combines 1) the
+                outcome of voting, 2) the number of downloads, and 3) the number of sales.
+                <br><br>
+                The main page of each user will have three top-10 lists (although in the future, 10 could be
+                changed for another arbitrary number): the 10 artists with highest performance overall, the 10
+                artists with highest performance over the last 6 months, and the 10 artists with highest performance
+                over the last 15 days.
+                <br><br>
+
+                It is expected, by nature of the open and unfiltered system, that many new artists will register
+                and as a consequence, that many songs will be of poor quality. By itself, this is not a problem, but it
+                is very important that the user can “separate the wheat from the chaff” (i.e. quickly find successful
+                artists with high-quality songs). Otherwise, if a user hears several songs that they do not like they
+                may not be motivated to return to the Web service in the future.
+
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section">
+
+        <div class="container">
+            <h1 class="title">Similarity</h1>
+            <p>
+                The information about an artist (at the bottom of the page) should include a section that helps users
+                find other artists that are “similar” according to some criterion. A list titled “people who listens to
+                X (the current artist) also like...”
+                <br><br>
+                There should also be a second list titled “artists with similar style”. To generate this list it is
+                necessary to take into account the percentage of songs of pairs of artists that have styles in common.
+                <br><br>
+
+                All lists are ordered by the performance of the artist
+            </p>
+        </div>
+    </section>
+
+
+
+    <section class="section">
+
+        <div class="container">
+            <h1 class="title">Notifications</h1>
+            <p>
+                Part of the main page of each user is dedicated to notifications. A user can subscribe to an artist or
+                a style. The system automatically notifies the user when a subscribed artist publishes new songs.
+                Likewise, the system notifies a user when a song of a given style is published.
+                <br><br>
+                One advantage of notification is to promote loyalty among users: if a user permits (by checking
+                a box on their page) the notifications are also sent by email. Apart from the notification, the
+                message sent also includes the top-10 lists. This way, a user that does not visit the Web service
+                regularly can still receive potentially interesting information. Moreover, sending the message in
+                HTML format leaves users one click away from the songs that they wants to listen to, and thanks
+                to the notifications it is more likely that they visit the Web service more often.
+
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section">
+
+        <div class="container">
+            <h1 class="title">Unlisting</h1>
+            <p>
+                Both artists and operators can unlist songs and albums, removing them from the system. Once
+                unlisted they are not visible to users (they do, however, remain visible to artists and operators who
+                can later relist the songs and albums).
+            </p>
+        </div>
+    </section>
+
+
+    <script src="./../../public/js/main.js"></script>
+</body>
+
+</html>
