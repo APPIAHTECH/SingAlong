@@ -7,7 +7,7 @@
 
 # Estructura de directoris
 <ul>
-    <li><b>doc : Conte la documentació del programari.</b></li>
+    <li><b>doc : Conte la carpeta de la documentació del programari.</b></li>
     <ul>
         <li><b>views : Conte els diferents parts de web que es pot visitar. Com per exemple la pàgina tasques</b></li>
         <li><b>index.html : La entrada principal a la documentació</b></li>
